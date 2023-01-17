@@ -14,11 +14,12 @@ import com.cars_api.api.dto.CarDto;
 public class Controller {
     @GetMapping
     public String get(){
-        return "Olá Spring";
+        return "Formato de dados: {modelo: String,fabricante: String,dataFabricacao: String,valor: double,anoModelo: int}";
+
     }
 
     @PostMapping
-    public void postCar(@RequestBody CarDto req){
+    public void postCar(@RequestBody CarDto req) {
         System.out.println(req);
         System.out.println(req.modelo());
         System.out.println(req.fabricante());
